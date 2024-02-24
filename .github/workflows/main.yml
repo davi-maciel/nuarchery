@@ -19,6 +19,6 @@ jobs:
     - name: Deploy to HostGator
       run: |
         ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.HOSTGATOR_HOSTNAME }} << 'EOF'
-        cd public_html
-        git clone https://github.com/davi-maciel/nuarchery.git nuarchery
+        cd public_html/nuarchery
+        git pull origin main
         EOF
